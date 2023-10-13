@@ -1,8 +1,12 @@
+import React from 'react';
+import { FormInput, Label } from "./Filter.style"
+
+
 export const Filter = ({value,onChange}) => {
     return (
-        <label>
+        <Label>
             Find Contacts: 
-            <input type="text" name="filter" value={value} onChange={onChange}></input>
-        </label>
+            <FormInput type="text" name="filter" value={value} onChange={onChange}></FormInput>
+        </Label>
     )
 }

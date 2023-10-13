@@ -1,10 +1,14 @@
+import { ButtonItem, ListItem } from "./PhoneListItem.style"
+
+
 export const PhoneListItem = ({id,firstName,number,onRemove}) => {
     return (
-        <li key={id} >
+        <ListItem key={id} >
       {firstName}: {number}
-      <button onClick={() => onRemove(id)}>
+        <ButtonItem
+          onClick={() => onRemove(id)}>
         Remove
-      </button>
-    </li>
+      </ButtonItem>
+    </ListItem>
 )
 }

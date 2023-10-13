@@ -2,7 +2,8 @@ import {Phonebook} from 'components/Phonebook/Phonebook'
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
 import {PhoneList} from 'components/PhoneList/PhoneList'
-import{Filter} from 'components/Filter/Filter'
+import { Filter } from 'components/Filter/Filter'
+
 export class App extends Component {
 
   state = {

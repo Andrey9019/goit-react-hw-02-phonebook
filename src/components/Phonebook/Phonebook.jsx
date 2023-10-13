@@ -1,5 +1,7 @@
-import { Formik, Field, Form,ErrorMessage } from 'formik';
+import { Formik } from 'formik';
  import * as Yup from 'yup';
+import { ButtonForm, FormContainer,PhoneForm,StyledField ,FormErrorMes} from './Phonebook.style';
+import { Label  } from 'components/Filter/Filter.style';
 
  const phonebookSchema = Yup.object().shape({
    firstName: Yup.string()
@@ -15,7 +17,7 @@ import { Formik, Field, Form,ErrorMessage } from 'formik';
  });
 
 export const Phonebook = ({onAdd}) => (
-  <div>
+  <FormContainer>
     <h1>Phonebook</h1>
     <Formik
       initialValues={{
@@ -32,19 +34,19 @@ export const Phonebook = ({onAdd}) => (
           onAdd(values)
           action.resetForm()
       }}>
-      <Form>
-        <label >Name
-                <Field name="firstName" />
-                <ErrorMessage name="firstName" />
-        </label>
+      <PhoneForm>
+        <Label >Name
+                <StyledField name="firstName" />
+                <FormErrorMes name="firstName" />
+        </Label>
                 
-        <label >Number
-                <Field type="tel" name="number" />
-                <ErrorMessage name="number" />
-        </label>
+        <Label >Number
+                <StyledField type="tel" name="number" />
+                <FormErrorMes name="number" />
+        </Label>
         
-        <button type="submit">Add Coontact</button>
-      </Form>
+        <ButtonForm  type="submit">Add Coontact</ButtonForm>
+      </PhoneForm>
     </Formik>
-  </div>
+  </FormContainer>
 );

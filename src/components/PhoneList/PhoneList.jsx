@@ -1,9 +1,11 @@
 import React from 'react';
+
 import { PhoneListItem } from 'components/PhoneListItem/PhoneListItem';
+import { List } from './PhoneList.style';
 
 export const PhoneList = ({ contacts, onRemove }) => {
   return (
-    <ul>
+    <List>
       {contacts.map(({ firstName, number, id }) => (
         <PhoneListItem
           key={id}
@@ -13,7 +15,7 @@ export const PhoneList = ({ contacts, onRemove }) => {
           onRemove={onRemove}
         />
       ))}
-    </ul>
+    </List>
   );
 };
 
