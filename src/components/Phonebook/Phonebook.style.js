@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 export const FormErrorMes = styled(ErrorMessage)`
   color: red;
-  margin-bottom: 20px;
-  font-size: 32px;
+  font-size: 14px;
 `;
 
 export const PhoneForm = styled(Form)`

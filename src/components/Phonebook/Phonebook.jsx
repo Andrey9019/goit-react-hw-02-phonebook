@@ -37,12 +37,12 @@ export const Phonebook = ({onAdd}) => (
       <PhoneForm>
         <Label >Name
                 <StyledField name="firstName" />
-                <FormErrorMes name="firstName" />
+                <FormErrorMes component="p" name="firstName" />
         </Label>
                 
         <Label >Number
-                <StyledField type="tel" name="number" />
-                <FormErrorMes name="number" />
+                <StyledField  type="tel" name="number" />
+                <FormErrorMes component="p" name="number" />
         </Label>
         
         <ButtonForm  type="submit">Add Coontact</ButtonForm>
