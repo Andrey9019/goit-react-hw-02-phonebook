@@ -3,6 +3,7 @@ import { Component } from 'react';
 import { nanoid } from 'nanoid';
 import {PhoneList} from 'components/PhoneList/PhoneList'
 import { Filter } from 'components/Filter/Filter'
+import { Container } from './App.style';
 
 export class App extends Component {
 
@@ -43,12 +44,12 @@ contacts: [
   
 const contactsFilter = this.onContactFilter()
 
-  return (<div>
+  return (<Container>
     <Phonebook onAdd={this.addList} />
     <Filter value={this.state.filter} onChange={this.handleFilter}></Filter>
     <PhoneList contacts={contactsFilter}
       onRemove={this.onRemove} />
-   </div>
+   </Container>
 
 );
   };
